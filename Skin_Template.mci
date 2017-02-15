@@ -1,0 +1,34 @@
+####
+# Template of input files for Monte Carlo simulation (mcml).
+# Anything in a line after "#" is ignored as comments.
+# Space lines are also ignored.
+# Lengths are in cm, mua and mus are in 1/cm.
+####
+
+1.0						# file version
+1						# number of runs
+
+### Specify data for run 1
+temp2.mco	A				# output filename, ASCII/Binary
+10000				# No. of photons
+4E-3 20E-4					# dz, dr
+200	200	30				# No. of dz, dr & da.
+
+7						# No. of layers
+0						# No. of objects
+						# Object code: 0)No embedded object
+
+
+						# 1)Sphere 2)Cylinder 3)Ellipsoid
+						# 4)Cuboid
+						# Object layer						
+1.5			# n for medium above.						
+# n    mua	   mus	 g	  d		# One line for each layer
+1.5   0.841   1000  0.86 0.002  # Stratum Corneum
+1.34  6.535    450  0.8  0.008  # Living Epidermis
+1.4	  0.3544   300	0.9	 0.016  # Papillary Dermis
+1.34  0.6493   350  0.95 0.01   # Upper Blood Net Dermis
+1.4	  0.236	   250  0.8  0.14   # Reticular Dermis
+1.38  0.3181   300  0.95 0.01   # Deep Blood Net Dermis
+1.44  0.23   52.316 0.75 0.6    # Hypodermis
+1.0				# n for medium below.
